@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    justify-content: center;
+    padding: 10px 0;
+}
+main.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border: 1px solid red;
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+}
+form button, select, input {
+    padding: 5px;
+}
+form button {
+    cursor: pointer;
+    font-weight: bold;
+}
+form button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.btn-switch {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+.btn-switch.animate {
+    transform: rotate(180deg);
+}
+.switch-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+/* Animation sur les zones */
+.zone1, .zone2 {
+    display: inline-block;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Animation pendant l'échange */
+.zone1.animate {
+    transform: translateX(100px) rotate(5deg);
+    opacity: 0.5;
+}
+
+.zone2.animate {
+    transform: translateX(-100px) rotate(-5deg);
+    opacity: 0.5;
+}
+
+.switch-icon.animate {
+    transform: rotate(180deg);
+}
+#listeP1{
+    /* border: 1px solid red; */
+}
+#listeP2 {
+    /* border: 1px solid blue; */
+}
