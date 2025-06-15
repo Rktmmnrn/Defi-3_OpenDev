@@ -8,15 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const liste2 = document.getElementById('listeP2');
     const btnSwitch = document.querySelector('.btn-switch');
     const switchIcon = document.querySelector('.switch-icon');
-    const btnConvertir = document.querySelector('.form-convert');
+    const btnConvertir = document.querySelector('.btn-convert');
 
-    const montant1 = document.querySelectorAll('input')[0];
-    const montant2 = document.querySelectorAll('input')[1];
+    const montant1 = document.getElementById('montant1');
+    const montant2 = document.getElementById('montant2');
 
+    liste1.style.textTransform = "uppercase";
+    liste2.style.textTransform = "uppercase";
     const pays = [
         {name: "mada",devise: "Ar", taux: 1},
         {name: "ang",devise: "Eur", taux: 0.00026},
-        { name: "USA", devise: "USD", taux: 0.00021 },
+        { name: "usa", devise: "USD", taux: 0.00021 },
         { name: "japon", devise: "YEN", taux: 0.029 },
         { name: "chine", devise: "YUAN", taux: 0.0013 }
     ];
